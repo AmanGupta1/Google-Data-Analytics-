@@ -1,6 +1,6 @@
 # To collect information about machine events. By looking in the 'schema.csv' file, we know that the csv files in 
-this directory have five fields: time, machine ID, event type, platform ID, cpu capacity, and memory capacity.
-The event type is an integer, 0, 1, 2, with values meaning that a machine has been ADDED (0), REMOVED (1), or UPDATED (2).
+# this directory have five fields: time, machine ID, event type, platform ID, cpu capacity, and memory capacity.
+# The event type is an integer, 0, 1, 2, with values meaning that a machine has been ADDED (0), REMOVED (1), or UPDATED (2).
 
 
 from collections import OrderedDict
