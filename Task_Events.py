@@ -39,8 +39,8 @@ tasks_df = None
 
 for fn in sorted(os.listdir('/home/aman/Documents/Aman/Google_Project/clusterdata-2011-2/task_events')):
     
-    fp = path.join('/home/aman/Documents/Aman/Google_Project/clusterdata-2011-2/task_events', fn)
-    task_events_df = read_csv(fp, header=None, index_col=False, compression='gzip', 
+    fp = os.path.join('/home/aman/Documents/Aman/Google_Project/clusterdata-2011-2/task_events', fn)
+    task_events_df = pd.read_csv(fp, header=None, index_col=False, compression='gzip', 
                               names=task_events_csv_colnames)
     
     for index, event in task_events_df.iterrows():
