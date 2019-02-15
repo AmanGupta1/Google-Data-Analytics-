@@ -6,6 +6,7 @@ The event type is an integer, 0, 1, 2, with values meaning that a machine has be
 from collections import OrderedDict
 import os
 from pandas import DataFrame
+import pandas as pd
 
 machines_dict = {}
 sample_moments_iterator = iter(sample_moments)
@@ -15,8 +16,8 @@ machines_df = None
 machine_events_csv_colnames=['time', 'machine_id', 'event_type', 'platform_id', 'cpu', 'mem']
 
 for fn in sorted(os.listdir('/home/aman/Documents/Aman/Google_Project/clusterdata-2011-2/machine_events')):
-    fp = path.join('/home/aman/Documents/Aman/Google_Project/clusterdata-2011-2/machine_events', fn)
-    machine_events_df = read_csv(fp, header=None, index_col=False, compression='gzip', names=machine_events_csv_colnames)
+    fp = os.path.join('/home/aman/Documents/Aman/Google_Project/clusterdata-2011-2/machine_events', fn)
+    machine_events_df = pd.read_csv(fp, header=None, index_col=False, compression='gzip', names=machine_events_csv_colnames)
     for index, event in machine_events_df.iterrows():
         
         if current_sample_moment is not None and event['time'] > current_sample_moment:
