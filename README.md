@@ -1,14 +1,4 @@
 # Google-Data-Analytics-
 
-First file to start with is Task_Events where we have plotted the graph between 'CPU Requested' and 'Memory Requested'.
-
-After that, File named 'Machine_Events' is analyzed and plotted the graph between 'CPU Requested', 'Memory Requested',
-'CPU Available' and 'Memory Available'. 
-
-We found out that "So, while demand varies up and down among tasks that 
-have been submitted to the system whereas availablity remains fairly constant".
-
-The "Demand" for memory and cpu stay above availability, with some notable dips for memory.
-
-Some statistics have been recorded from 'Machine_Events' file which provides the information about Percentage of Machines
-used or available for different attributes in 'Machine_Events' file.
+In this project we have to analyzes and visualize Google release of scheduler request and utilization data across a large (12500+) general-purpose compute cluster over 29 days. Here the idea is to analyze and visualize the data set with respect to tasks and jobs.
+We focused on analysing the resource wastage because of failed jobs and tasks and analyze the pattern to prevent this wastage in google cloud.
