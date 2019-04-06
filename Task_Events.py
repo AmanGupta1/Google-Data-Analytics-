@@ -4,7 +4,7 @@ from pandas import read_csv
 from os import path
 task_events_csv_colnames = ['time', 'missing', 'job_id', 'task_idx', 'machine_id', 'event_type', 'user', 'sched_cls', 
                             'priority', 'cpu_requested', 'mem_requested', 'disk', 'restriction']         
-task_event_df = read_csv(path.join('task_events', 'part-00499-of-00500.csv.gz'), header=None, index_col=False, 
+task_event_df = read_csv(os.path.join('task_events', 'part-00499-of-00500.csv.gz'), header=None, index_col=False, 
                          compression='gzip', names=task_events_csv_colnames)
 
 x= (task_event_df['time'])
